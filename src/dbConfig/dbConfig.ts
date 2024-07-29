@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 export async function connect() {
     try{
-         mongoose.connect("mongodb+srv://emmanuelyartey163:phantompain@cluster0.xiyltrh.mongodb.net/")
+         mongoose.connect(process.env.MONGO_URL!)
         const connection =  mongoose.connection;
 
         connection.on('connected',() => {
